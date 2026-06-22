@@ -13,6 +13,9 @@ import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import org.slf4j.Logger;
 
+// Import the AdBlocker module from your chosen package
+import com.obsidiansn0w.adblocker.modules.AdBlocker;
+
 public class AddonTemplate extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
     public static final Category CATEGORY = new Category("Example");
@@ -24,6 +27,7 @@ public class AddonTemplate extends MeteorAddon {
 
         // Modules
         Modules.get().add(new ModuleExample());
+        Modules.get().add(new AdBlocker()); // register AdBlocker
 
         // Commands
         Commands.add(new CommandExample());
@@ -39,11 +43,11 @@ public class AddonTemplate extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "com.obsidiansn0w.adblocker";
     }
 
     @Override
     public GithubRepo getRepo() {
-        return new GithubRepo("MeteorDevelopment", "meteor-addon-template");
+        return new GithubRepo("0bsidianSn0w", "adblock-meteor");
     }
 }
