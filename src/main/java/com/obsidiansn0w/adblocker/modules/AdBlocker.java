@@ -1,4 +1,4 @@
-package com.obsidiansn0w.adblocker.modules
+package com.obsidiansn0w.adblocker.modules;
 
 import java.util.List;
 import java.util.ArrayList;
